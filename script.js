@@ -1,7 +1,7 @@
 const form = document.getElementById("leadForm");
 const formMessage = document.getElementById("formMessage");
 
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwVLWid-MrPDV6YIqJNg1BUQJuCktVDf6yp6nxRGBuymAsntxVXe496AlIqcSFiVNKDrQ/exec";
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyXCe9p4BC5tsboJUnCfmOifxMhXzJhUk-sFMJNWnOrtX2FXbTLuhZ_vi3Sc38hq-CJdA/exec";
 const WHATSAPP_NUMBER = "447490908644";
 
 form.addEventListener("submit", async function (e) {
