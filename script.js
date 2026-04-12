@@ -1,7 +1,7 @@
 const form = document.getElementById("leadForm");
 const formMessage = document.getElementById("formMessage");
 
-const SCRIPT_URL = "YOUR_GOOGLE_APPS_SCRIPT_URL";
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwVLWid-MrPDV6YIqJNg1BUQJuCktVDf6yp6nxRGBuymAsntxVXe496AlIqcSFiVNKDrQ/exec";
 const WHATSAPP_NUMBER = "447490908644";
 
 form.addEventListener("submit", async function (e) {
