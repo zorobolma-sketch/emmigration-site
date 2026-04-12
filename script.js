@@ -42,7 +42,6 @@ form.addEventListener("submit", async function (e) {
       setTimeout(() => {
         window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${whatsappText}`, "_blank");
       }, 1200);
-
     } else {
       formMessage.textContent = "حدث خطأ أثناء الإرسال. حاول مرة أخرى.";
       formMessage.style.color = "#ff9b9b";
