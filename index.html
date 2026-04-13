@@ -1,40 +1,110 @@
-<section id="apply" class="section">
-  <div class="container">
-    <div class="section-head">
-      <h2>قدّم معلوماتك</h2>
-      <p>بعد الإرسال سيتم توجيهك إلى واتساب لإكمال التحقق</p>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emmigration</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container nav-inner">
+      <div class="logo">Emmigration</div>
+      <nav>
+        <a href="#home">الرئيسية</a>
+        <a href="#services">الخدمات</a>
+        <a href="#apply">التقديم</a>
+        <a href="https://wa.me/447490908644" target="_blank" class="btn btn-sm">واتساب</a>
+      </nav>
     </div>
+  </header>
 
-    <form id="leadForm" class="lead-form">
-      <div class="form-grid">
-        <div class="form-group">
-          <label for="fullName">الاسم الكامل بالفرنسية</label>
-          <input id="fullName" name="fullName" type="text" placeholder="Nom complet en français" required>
-        </div>
+  <section id="home" class="hero">
+    <div class="container hero-content">
+      <span class="badge">خدمة إرسال المعلومات وإكمال التحقق عبر واتساب</span>
+      <h1>ابدأ رحلتك نحو فرص جديدة خارج بلدك بثقة وسهولة</h1>
+      <p>أدخل معلوماتك الأساسية، وبعد الإرسال سيتم توجيهك إلى واتساب لإكمال التحقق.</p>
 
-        <div class="form-group">
-          <label for="whatsapp">رقم الواتساب</label>
-          <input id="whatsapp" name="whatsapp" type="text" placeholder="رقم الواتساب" required>
-        </div>
+      <div class="hero-actions">
+        <a href="#apply" class="btn">قدّم الآن</a>
+        <a href="https://wa.me/447490908644" target="_blank" class="btn btn-outline">تواصل عبر واتساب</a>
+      </div>
+    </div>
+  </section>
 
-        <div class="form-group">
-          <label for="birthDate">تاريخ الازدياد</label>
-          <input id="birthDate" name="birthDate" type="date" required>
-        </div>
-
-        <div class="form-group">
-          <label for="country">الدولة</label>
-          <input id="country" name="country" type="text" placeholder="الدولة" required>
-        </div>
+  <section id="services" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>خدماتنا</h2>
       </div>
 
-      <div class="form-group">
-        <label for="message">ملاحظات</label>
-        <textarea id="message" name="message" rows="5" placeholder="ملاحظات"></textarea>
+      <div class="cards">
+        <div class="card">
+          <h3>إدخال البيانات</h3>
+          <p>نساعدك على إدخال معلوماتك بشكل صحيح.</p>
+        </div>
+        <div class="card">
+          <h3>مراجعة أولية</h3>
+          <p>نقوم بمراجعة أولية للبيانات قبل المتابعة.</p>
+        </div>
+        <div class="card">
+          <h3>تحقق عبر واتساب</h3>
+          <p>إكمال الخطوات يتم بسهولة عبر واتساب.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="apply" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>قدّم معلوماتك</h2>
+        <p>بعد الإرسال سيتم توجيهك مباشرة إلى واتساب</p>
       </div>
 
-      <button type="submit" class="submit-btn">إرسال الطلب</button>
-      <p id="formMessage" class="form-message"></p>
-    </form>
-  </div>
-</section>
+      <form class="lead-form" method="POST" action="PASTE_YOUR_APPS_SCRIPT_EXEC_URL_HERE">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="fullName">الاسم الكامل بالفرنسية</label>
+            <input id="fullName" name="fullName" type="text" placeholder="Nom complet en français" required>
+          </div>
+
+          <div class="form-group">
+            <label for="whatsapp">رقم الواتساب</label>
+            <input id="whatsapp" name="whatsapp" type="text" placeholder="رقم الواتساب" required>
+          </div>
+
+          <div class="form-group">
+            <label for="birthDate">تاريخ الازدياد</label>
+            <input id="birthDate" name="birthDate" type="date" required>
+          </div>
+
+          <div class="form-group">
+            <label for="country">الدولة</label>
+            <input id="country" name="country" type="text" placeholder="الدولة" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="message">ملاحظات</label>
+          <textarea id="message" name="message" rows="5" placeholder="ملاحظات"></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">إرسال الطلب</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>Emmigration ©</div>
+      <a href="https://wa.me/447490908644" target="_blank">واتساب</a>
+    </div>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/447490908644" target="_blank">واتساب</a>
+
+</body>
+</html>
