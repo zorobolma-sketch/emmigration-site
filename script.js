@@ -19,17 +19,14 @@ form.addEventListener("submit", async function (e) {
   formMessage.style.color = "#d7e6ff";
 
   try {
-    const response = await fetch("https://script.google.com/macros/s/AKfycbzLHiCS4l43_DE52oWEY6zhe_LlbpVo-c5dFaAsxLnJxa09zU5mcg9CnsfTgnN3Pmr2ig/exec", {
+    const response = await fetch(SCRIPT_URL, {
       method: "POST",
-      body: JSON.stringify(data),
-      headers: {
-        "Content-Type": "application/json"
-      }
+      body: new URLSearchParams(data)
     });
 
-    const result = await response.json();
+    const text = await response.text();
 
-    if (result.result === "success") {
+    if (response.ok) {
       formMessage.innerHTML = "تم إرسال معلوماتك بنجاح.<br>يمكنك الآن إكمال التحقق عبر واتساب.";
       formMessage.style.color = "#79f2a4";
 
@@ -45,6 +42,7 @@ form.addEventListener("submit", async function (e) {
     } else {
       formMessage.textContent = "حدث خطأ أثناء الإرسال. حاول مرة أخرى.";
       formMessage.style.color = "#ff9b9b";
+      console.log(text);
     }
   } catch (error) {
     formMessage.textContent = "تعذر الإرسال حالياً.";
