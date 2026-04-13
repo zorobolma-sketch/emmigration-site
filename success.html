@@ -1,66 +1,53 @@
 <!DOCTYPE html>
-      font-size: clamp(2rem, 5vw, 3rem);
-      margin-bottom: 12px;
-    }
-
-    p {
-      color: #5d6b82;
-      line-height: 1.7;
-      margin-bottom: 16px;
-    }
-
-    .ar {
-      direction: rtl;
-      font-family: 'Cairo', sans-serif;
-      color: #4a5870;
-      margin-bottom: 22px;
-    }
-
-    .actions {
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Success</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7faff;
       display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
       justify-content: center;
-      margin-top: 22px;
-    }
-
-    .btn {
-      display: inline-flex;
       align-items: center;
-      justify-content: center;
-      padding: 14px 24px;
-      border-radius: 14px;
-      font-weight: 700;
-      text-decoration: none;
-      transition: 0.25s ease;
+      min-height: 100vh;
+      margin: 0;
     }
-
-    .btn:hover {
-      transform: translateY(-2px);
+    .box {
+      background: white;
+      padding: 40px;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      max-width: 600px;
+      width: 90%;
     }
-
-    .btn-primary {
-      background: linear-gradient(135deg, #174ea6, #2b6de0);
-      color: #fff;
-    }
-
-    .btn-secondary {
-      background: #fff;
+    h1 {
       color: #174ea6;
-      border: 1px solid #dce5f2;
+    }
+    p {
+      color: #555;
+      margin: 15px 0;
+    }
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 14px 22px;
+      background: #174ea6;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
-  <div class="card">
-    <div class="check">✓</div>
+  <div class="box">
     <h1>Application Sent Successfully</h1>
-    <p>Your request has been received. Please continue the next step on WhatsApp to complete the verification process.</p>
-    <p class="ar">تم إرسال طلبك بنجاح. المرجو المتابعة عبر واتساب لإتمام خطوة التحقق.</p>
-    <div class="actions">
-      <a class="btn btn-primary" href="https://wa.me/447490908644?text=Hello%2C%20I%20have%20submitted%20my%20application%20on%20Emmigration%20website%20and%20I%20want%20to%20continue%20the%20verification." target="_blank">Continue on WhatsApp</a>
-      <a class="btn btn-secondary" href="index.html">Back to Home</a>
-    </div>
+    <p>Your request has been received.</p>
+    <p>Please continue on WhatsApp for verification.</p>
+    <a href="https://wa.me/447490908644" target="_blank">Continue on WhatsApp</a>
   </div>
 </body>
 </html>
