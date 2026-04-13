@@ -39,7 +39,7 @@ a {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(255, 255, 255, 0.88);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
 }
@@ -134,7 +134,7 @@ a {
 
 .btn {
   background: var(--primary);
-  color: white;
+  color: #ffffff !important;
 }
 
 .btn:hover {
@@ -156,6 +156,12 @@ a {
 .btn-sm {
   padding: 10px 16px;
   border-radius: 12px;
+  color: #ffffff !important;
+}
+
+.nav-links .btn,
+.nav-links .btn-sm {
+  color: #ffffff !important;
 }
 
 .hero-features {
@@ -359,6 +365,11 @@ a {
   outline: none;
 }
 
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #98a2b3;
+}
+
 .form-group input:focus,
 .form-group textarea:focus {
   border-color: var(--primary);
@@ -435,7 +446,7 @@ a {
   bottom: 20px;
   z-index: 1000;
   background: var(--green);
-  color: white;
+  color: white !important;
   padding: 14px 18px;
   border-radius: 999px;
   font-weight: 800;
