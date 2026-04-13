@@ -24,14 +24,18 @@ form.addEventListener("submit", async function (e) {
       body: new URLSearchParams(data)
     });
 
-    const text = await response.text();
+    const resultText = await response.text();
 
     if (response.ok) {
       formMessage.innerHTML = "تم إرسال معلوماتك بنجاح.<br>يمكنك الآن إكمال التحقق عبر واتساب.";
       formMessage.style.color = "#79f2a4";
 
       const whatsappText = encodeURIComponent(
-        `مرحباً، لقد أرسلت معلوماتي عبر الموقع وأرغب في إكمال التحقق.\nالاسم: ${data.fullName}\nتاريخ الازدياد: ${data.birthDate}\nرقم الواتساب: ${data.whatsapp}\nالدولة: ${data.country}`
+        `مرحباً، لقد أرسلت معلوماتي عبر الموقع وأرغب في إكمال التحقق.
+الاسم: ${data.fullName}
+تاريخ الازدياد: ${data.birthDate}
+رقم الواتساب: ${data.whatsapp}
+الدولة: ${data.country}`
       );
 
       form.reset();
@@ -42,7 +46,7 @@ form.addEventListener("submit", async function (e) {
     } else {
       formMessage.textContent = "حدث خطأ أثناء الإرسال. حاول مرة أخرى.";
       formMessage.style.color = "#ff9b9b";
-      console.log(text);
+      console.error(resultText);
     }
   } catch (error) {
     formMessage.textContent = "تعذر الإرسال حالياً.";
