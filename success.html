@@ -1,35 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Application Submitted</title>
-  <link rel="stylesheet" href="style.css" />
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin-bottom: 12px;
+    }
+
+    p {
+      color: #5d6b82;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    .ar {
+      direction: rtl;
+      font-family: 'Cairo', sans-serif;
+      color: #4a5870;
+      margin-bottom: 22px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: center;
+      margin-top: 22px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 24px;
+      border-radius: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: 0.25s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #174ea6, #2b6de0);
+      color: #fff;
+    }
+
+    .btn-secondary {
+      background: #fff;
+      color: #174ea6;
+      border: 1px solid #dce5f2;
+    }
+  </style>
 </head>
 <body>
-  <main class="success-page">
-    <div class="success-card">
-      <div class="checkmark">✓</div>
-      <h1>Application Submitted Successfully</h1>
-      <p>
-        Thank you. Your details have been received successfully.
-      </p>
-      <p>
-        Please continue your verification on WhatsApp by clicking the button below.
-      </p>
-
-      <a
-        class="whatsapp-btn"
-        href="https://wa.me/447490908644?text=Hello%20I%20have%20submitted%20my%20application%20on%20your%20website%20and%20I%20want%20to%20continue%20the%20verification."
-        target="_blank"
-      >
-        Continue on WhatsApp
-      </a>
-
-      <div class="back-link">
-        <a href="index.html">← Back to website</a>
-      </div>
+  <div class="card">
+    <div class="check">✓</div>
+    <h1>Application Sent Successfully</h1>
+    <p>Your request has been received. Please continue the next step on WhatsApp to complete the verification process.</p>
+    <p class="ar">تم إرسال طلبك بنجاح. المرجو المتابعة عبر واتساب لإتمام خطوة التحقق.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="https://wa.me/447490908644?text=Hello%2C%20I%20have%20submitted%20my%20application%20on%20Emmigration%20website%20and%20I%20want%20to%20continue%20the%20verification." target="_blank">Continue on WhatsApp</a>
+      <a class="btn btn-secondary" href="index.html">Back to Home</a>
     </div>
-  </main>
+  </div>
 </body>
 </html>
