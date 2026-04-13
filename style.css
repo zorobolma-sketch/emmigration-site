@@ -20,7 +20,10 @@ body {
   color: var(--text);
 }
 
-a { text-decoration: none; color: inherit; }
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
 .container {
   width: min(1120px, calc(100% - 32px));
@@ -226,12 +229,6 @@ nav a {
   font-size: 16px;
   font-weight: 800;
   cursor: pointer;
-}
-
-.form-message {
-  margin-top: 14px;
-  text-align: center;
-  font-weight: 800;
 }
 
 .footer {
