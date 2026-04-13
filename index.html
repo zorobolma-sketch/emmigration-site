@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Emmigration</title>
+  <meta name="description" content="منصة احترافية لمراجعة المعلومات والتواصل عبر واتساب لإكمال التحقق." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <header class="navbar">
     <div class="container nav-inner">
       <div class="logo">Emmigration</div>
-      <nav>
+
+      <nav class="nav-links">
         <a href="#home">الرئيسية</a>
         <a href="#services">الخدمات</a>
+        <a href="#reviews">آراء العملاء</a>
         <a href="#apply">التقديم</a>
         <a href="https://wa.me/447490908644" target="_blank" class="btn btn-sm">واتساب</a>
       </nav>
@@ -22,49 +27,149 @@
   </header>
 
   <section id="home" class="hero">
-    <div class="container hero-content">
-      <span class="badge">خدمة إرسال المعلومات وإكمال التحقق عبر واتساب</span>
-      <h1>ابدأ رحلتك نحو فرص جديدة خارج بلدك بثقة وسهولة</h1>
-      <p>أدخل معلوماتك الأساسية، وبعد الإرسال سيتم توجيهك إلى واتساب لإكمال التحقق.</p>
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <span class="badge">خدمة مراجعة أولية وإكمال التحقق عبر واتساب</span>
+        <h1>منصة احترافية لمراجعة معلوماتك والتواصل معك بشكل واضح وآمن</h1>
+        <p>
+          نقوم باستقبال معلوماتك الأساسية، مراجعتها بشكل أولي، ثم توجيهك إلى واتساب
+          لإكمال خطوات التحقق والمتابعة بطريقة بسيطة واحترافية.
+        </p>
 
-      <div class="hero-actions">
-        <a href="#apply" class="btn">قدّم الآن</a>
-        <a href="https://wa.me/447490908644" target="_blank" class="btn btn-outline">تواصل عبر واتساب</a>
+        <div class="hero-actions">
+          <a href="#apply" class="btn">قدّم الآن</a>
+          <a href="https://wa.me/447490908644" target="_blank" class="btn btn-outline">تواصل عبر واتساب</a>
+        </div>
+
+        <div class="hero-features">
+          <div class="feature-pill">واجهة واضحة وسهلة</div>
+          <div class="feature-pill">مراجعة أولية للمعلومات</div>
+          <div class="feature-pill">تواصل سريع عبر واتساب</div>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="info-card">
+          <h3>كيف تعمل الخدمة؟</h3>
+          <div class="info-step">
+            <span class="step-number">1</span>
+            <div>
+              <strong>إرسال المعلومات</strong>
+              <p>تقوم بتعبئة النموذج بالمعلومات الأساسية المطلوبة.</p>
+            </div>
+          </div>
+          <div class="info-step">
+            <span class="step-number">2</span>
+            <div>
+              <strong>المراجعة الأولية</strong>
+              <p>نقوم بمراجعة المعلومات المسجلة داخل النظام.</p>
+            </div>
+          </div>
+          <div class="info-step">
+            <span class="step-number">3</span>
+            <div>
+              <strong>إكمال التحقق</strong>
+              <p>بعد الإرسال، يتم توجيهك للتواصل معنا عبر واتساب.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="services" class="section">
+  <section id="services" class="section light-section">
     <div class="container">
       <div class="section-head">
-        <h2>خدماتنا</h2>
+        <span class="section-kicker">خدماتنا</span>
+        <h2>خدمات مصممة لتسهيل المراجعة والمتابعة</h2>
+        <p>نركز على الوضوح، المصداقية، وسهولة التواصل مع المستخدم.</p>
       </div>
 
-      <div class="cards">
-        <div class="card">
-          <h3>إدخال البيانات</h3>
-          <p>نساعدك على إدخال معلوماتك بشكل صحيح.</p>
+      <div class="cards-grid">
+        <div class="service-card">
+          <div class="card-icon">📝</div>
+          <h3>إدخال المعلومات</h3>
+          <p>نوفّر نموذجاً واضحاً وسهلاً لإرسال البيانات الأساسية بشكل منظم.</p>
         </div>
-        <div class="card">
+
+        <div class="service-card">
+          <div class="card-icon">🔎</div>
           <h3>مراجعة أولية</h3>
-          <p>نقوم بمراجعة أولية للبيانات قبل المتابعة.</p>
+          <p>يتم فحص المعلومات المسجلة أولياً قبل الانتقال إلى الخطوة التالية.</p>
         </div>
-        <div class="card">
-          <h3>تحقق عبر واتساب</h3>
-          <p>إكمال الخطوات يتم بسهولة عبر واتساب.</p>
+
+        <div class="service-card">
+          <div class="card-icon">💬</div>
+          <h3>متابعة عبر واتساب</h3>
+          <p>بعد الإرسال، يتم التواصل عبر واتساب لإكمال التحقق والمتابعة.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="apply" class="section">
+  <section class="section trust-section">
     <div class="container">
       <div class="section-head">
-        <h2>قدّم معلوماتك</h2>
-        <p>بعد الإرسال سيتم توجيهك مباشرة إلى واتساب</p>
+        <span class="section-kicker">لماذا نحن</span>
+        <h2>واجهة موثوقة وتجربة واضحة</h2>
       </div>
 
-      <form class="lead-form" method="POST" action="https://script.google.com/macros/s/AKfycbwxhMoFlMdNxPiftZBfODcsBqDD5KHtCgtsVjGYYIQO41VI4B5eTRllmVLPFgwMQ8d4vw/exec">
+      <div class="trust-grid">
+        <div class="trust-item">
+          <h3>تصميم احترافي</h3>
+          <p>واجهة نظيفة وواضحة تعطي انطباعاً جيداً وتسهل على المستخدم التقديم.</p>
+        </div>
+        <div class="trust-item">
+          <h3>تنظيم البيانات</h3>
+          <p>يتم حفظ المعلومات مباشرة داخل Google Sheets لمتابعتها بسهولة.</p>
+        </div>
+        <div class="trust-item">
+          <h3>تواصل مباشر</h3>
+          <p>يمكن للمستخدم الانتقال مباشرة إلى واتساب بعد إرسال النموذج.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews" class="section light-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-kicker">آراء العملاء</span>
+        <h2>انطباعات وتجارب إيجابية</h2>
+        <p>يمكنك تعديل هذه المراجعات لاحقاً ووضع مراجعاتك الحقيقية.</p>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>الخدمة كانت واضحة وسهلة جداً، وتم التواصل معي بسرعة عبر واتساب.</p>
+          <strong>عميل</strong>
+        </div>
+
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>أعجبني أن النموذج بسيط وأن خطوات المتابعة كانت منظمة وواضحة.</p>
+          <strong>مستخدم</strong>
+        </div>
+
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>الواجهة احترافية وتعطي ثقة، والتواصل كان سريعاً وسلساً.</p>
+          <strong>مراجع</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="apply" class="section apply-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-kicker">التقديم</span>
+        <h2>قدّم معلوماتك الآن</h2>
+        <p>بعد الإرسال سيتم حفظ معلوماتك في النظام، ثم يمكنك التواصل معنا عبر واتساب لإكمال التحقق.</p>
+      </div>
+
+      <form class="lead-form" method="POST" action="PASTE_YOUR_APPS_SCRIPT_EXEC_URL_HERE">
         <div class="form-grid">
           <div class="form-group">
             <label for="fullName">الاسم الكامل بالفرنسية</label>
@@ -88,19 +193,32 @@
         </div>
 
         <div class="form-group">
-          <label for="message">ملاحظات</label>
-          <textarea id="message" name="message" rows="5" placeholder="ملاحظات"></textarea>
+          <label for="message">ملاحظات إضافية</label>
+          <textarea id="message" name="message" rows="5" placeholder="أدخل أي ملاحظات إضافية هنا"></textarea>
         </div>
 
         <button type="submit" class="submit-btn">إرسال الطلب</button>
+
+        <p class="privacy-note">
+          يتم استخدام هذه المعلومات فقط من أجل المراجعة الأولية والمتابعة عبر واتساب.
+        </p>
       </form>
     </div>
   </section>
 
   <footer class="footer">
     <div class="container footer-inner">
-      <div>Emmigration ©</div>
-      <a href="https://wa.me/447490908644" target="_blank">واتساب</a>
+      <div>
+        <div class="footer-logo">Emmigration</div>
+        <p>واجهة احترافية لتسجيل المعلومات ومتابعتها.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#home">الرئيسية</a>
+        <a href="#services">الخدمات</a>
+        <a href="#reviews">المراجعات</a>
+        <a href="https://wa.me/447490908644" target="_blank">واتساب</a>
+      </div>
     </div>
   </footer>
 
