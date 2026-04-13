@@ -19,7 +19,7 @@ form.addEventListener("submit", async function (e) {
   formMessage.style.color = "#d7e6ff";
 
   try {
-    const response = await fetch(SCRIPT_URL, {
+    const response = await fetch("https://script.google.com/macros/s/AKfycbzLHiCS4l43_DE52oWEY6zhe_LlbpVo-c5dFaAsxLnJxa09zU5mcg9CnsfTgnN3Pmr2ig/exec", {
       method: "POST",
       body: JSON.stringify(data),
       headers: {
