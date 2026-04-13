@@ -1,127 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Emmigration to Europ and Canada</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header class="hero">
-    <div class="container">
-      <div class="badge">Trusted Immigration Assistance</div>
-      <h1>Emmigration to Europ and Canada</h1>
-      <p class="subtitle">
-        Start your application and submit your details securely.
-        Our team will review your information and continue verification with you on WhatsApp.
-      </p>
-    </div>
-  </header>
-
-  <main class="container main-grid">
-    <section class="card info-card">
-      <h2>Why apply with us?</h2>
-      <ul class="features">
-        <li>Simple online registration</li>
-        <li>Fast response and verification</li>
-        <li>WhatsApp follow-up support</li>
-        <li>Secure lead collection system</li>
-      </ul>
-
-      <div class="trust-box">
-        <h3>Application process</h3>
-        <p>Fill in the form with your real details.</p>
-        <p>Once submitted, your information will be reviewed.</p>
-        <p>You will then continue the verification process through WhatsApp.</p>
+        </div>
       </div>
-    </section>
-
-    <section class="card form-card">
-      <h2>Application Form</h2>
-      <form id="leadForm">
-        <div class="form-group">
-          <label for="fullName">Full Name</label>
-          <input type="text" id="fullName" name="fullName" required />
-        </div>
-
-        <div class="form-group">
-          <label for="whatsapp">WhatsApp</label>
-          <input type="text" id="whatsapp" name="whatsapp" placeholder="+212..." required />
-        </div>
-
-        <div class="form-group">
-          <label for="birthDate">Birth Date</label>
-          <input type="date" id="birthDate" name="birthDate" required />
-        </div>
-
-        <div class="form-group">
-          <label for="country">Country</label>
-          <input type="text" id="country" name="country" required />
-        </div>
-
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" placeholder="Tell us about your immigration goal..." required></textarea>
-        </div>
-
-        <button type="submit" id="submitBtn">Submit Application</button>
-        <p id="statusMsg" class="status"></p>
-      </form>
     </section>
   </main>
 
-  <footer class="footer">
+  <footer>
     <div class="container">
-      <p>© 2026 Emmigration to Europ and Canada. All rights reserved.</p>
+      © 2026 Emmigration — Europe & Canada Work Opportunities. All rights reserved.
     </div>
   </footer>
 
   <script>
     const SCRIPT_URL = "PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE";
-
     const form = document.getElementById("leadForm");
     const submitBtn = document.getElementById("submitBtn");
-    const statusMsg = document.getElementById("statusMsg");
+    const statusMessage = document.getElementById("statusMessage");
 
-    form.addEventListener("submit", async function(e) {
+    form.addEventListener("submit", async (e) => {
       e.preventDefault();
 
-      statusMsg.textContent = "";
       submitBtn.disabled = true;
-      submitBtn.textContent = "Submitting...";
+      submitBtn.textContent = "Sending...";
+      statusMessage.className = "status-message";
+      statusMessage.textContent = "";
 
-      const formData = {
-        fullName: document.getElementById("fullName").value.trim(),
-        whatsapp: document.getElementById("whatsapp").value.trim(),
-        birthDate: document.getElementById("birthDate").value,
-        country: document.getElementById("country").value.trim(),
-        message: document.getElementById("message").value.trim()
+      const formData = new FormData(form);
+      const payload = {
+        fullName: formData.get("fullName"),
+        whatsapp: formData.get("whatsapp"),
+        birthDate: formData.get("birthDate"),
+        country: formData.get("country"),
+        message: formData.get("message")
       };
 
       try {
         const response = await fetch(SCRIPT_URL, {
           method: "POST",
-          body: JSON.stringify(formData),
+          mode: "cors",
           headers: {
-            "Content-Type": "text/plain;charset=utf-8"
-          }
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(payload)
         });
 
         const result = await response.json();
 
-        if (result.result === "success") {
-          window.location.href = "success.html";
+        if (result.success) {
+          statusMessage.className = "status-message success";
+          statusMessage.textContent = "Application sent successfully. Redirecting...";
+          form.reset();
+          setTimeout(() => {
+            window.location.href = "success.html";
+          }, 1200);
         } else {
-          statusMsg.textContent = "Submission failed. Please try again.";
-          submitBtn.disabled = false;
-          submitBtn.textContent = "Submit Application";
+          throw new Error(result.message || "Submission failed");
         }
       } catch (error) {
-        statusMsg.textContent = "Connection error. Please try again.";
+        statusMessage.className = "status-message error";
+        statusMessage.textContent = "There was a problem sending your application. Please try again.";
+      } finally {
         submitBtn.disabled = false;
         submitBtn.textContent = "Submit Application";
       }
     });
+
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.15 });
+
+    reveals.forEach(el => observer.observe(el));
   </script>
 </body>
 </html>
